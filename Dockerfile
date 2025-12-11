@@ -2,7 +2,7 @@ FROM node:20-slim
 
 # Install jq and other required system utilities
 RUN apt-get update && \
-    apt-get install -y jq git && \
+    apt-get install -y jq git gh && \
     rm -rf /var/lib/apt/lists/*
 
 # Install Salesforce CLI using npm (global install)

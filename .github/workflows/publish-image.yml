@@ -33,6 +33,7 @@ jobs:
         run: |
           IMAGE=ghcr.io/${{ steps.vars.outputs.repo }}
           docker build -t $IMAGE:latest -t $IMAGE:sha-${{ github.sha }} .
+          echo  ${{ github.actor }}
 
       - name: Push image
         run: |

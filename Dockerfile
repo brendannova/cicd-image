@@ -1,5 +1,7 @@
 FROM node:20-slim
 
+COPY brendannova.env /brendannova.env
+
 # Install jq and other required system utilities
 RUN apt-get update && \
     apt-get install -y jq git gh && \
